@@ -28,14 +28,24 @@ class Main {
 		        		{
 		        			String type = "";
 		        			String text = token.getText();
+						
 
 		        			switch (token.getType())
 		        			{
 		        			case DecafLexer.ID:
 		        				type = " IDENTIFIER";
 		        				break;
-		        			}
+						case DecafLexer.CHAR:
+		        				type = " CHARLITERAL";
+		        				break;
+						
+						case DecafLexer.:
+		        				type = "\n \t";
+		        				break;
+
+						}
 		        			System.out.println (token.getLine() + type + " " + text);
+						
 		        		}
 		        		done = true;
         			} catch(Exception e) {
