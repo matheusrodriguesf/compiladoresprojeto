@@ -19,13 +19,14 @@ RCURLY : '}';
 
 ID  :  ('a'..'z' | 'A'..'Z')+;
 
-CHAR : '\''('a'..'z'| 'A'..'Z'|'0'..'9'|'\\')'\'';
 
-STRING : '"' (ESC|~'"')*;
-
-WS_ : (' ' | '\n' ) -> skip;
+CHARLITERAL: '\'' CHAR '\'';
+STRING : '"' CHAR+ '"';
+HEX: '0x'('0'..'9'|'a'..'f'|'A'..'F')+;
+WS_ : (' ' | '\n') -> skip;
 
 SL_COMMENT : '//' (~'\n')* '\n' -> skip;
 
-fragment
-ESC :  '\\' ('n'|'"');
+fragment ESC :  '\\' ('\\'|'t'|'n'|'"');
+fragment CHAR : ('a'..'z'| 'A'..'Z'|'0'..'9'|ESC|'\t');
+
