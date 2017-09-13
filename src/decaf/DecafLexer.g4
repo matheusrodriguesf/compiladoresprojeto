@@ -22,8 +22,7 @@ HEX: '0x'('0'..'9'|'a'..'f'|'A'..'F')+;
 NUMBER: ('-')?('0'..'9')+;
 
 RESERVADAS: BOOLEANO|CHAMAR|CLASSE|SENAO|FALSO|SE|INTEIRO|RETORNO|VERDADEIRO|VOID|PARA|FORPAR|BREAK|CONTINUA;
-OPERADORES : ('+'|'-'|'*'|'<'|'<='|'>'|'>='|'>'|'&&'|'!='|'=='|'||');
-
+OPERADORES : ('+'|'-'|'*'|'<'|'<='|'>'|'>='|'>'|'&&'|'!='|'=='|'||'|'==='|ESPECIAL);
 CHARLITERAL: '\'' CHAR '\'';
 
 ID: [_a-zA-Z][0-9_a-zA-Z]+;
