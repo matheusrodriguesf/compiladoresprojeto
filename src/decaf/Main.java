@@ -45,18 +45,75 @@ class Main {
 		        				break;
 
 
-						case 								DecafLexer.NUMBER:
+						case DecafLexer.NUMBER:
 							type = "NUMEROS";
 							break;
-						case 								DecafLexer.OPERADORES:
+						case DecafLexer.OPERADORES:
 							type = "OPERADORES";
 							break;
+						
+						case DecafLexer.BOOLEANO:
+							type = "BOOLEANO";
+							break;
 
-						case
+						case DecafLexer.CHAMAR:
+							type = "CHAMAR";
+							break;
+						case DecafLexer.CLASSE:
+							type = "CLASSE";
+							break;
+						case DecafLexer.SE:
+							type = "SE";
+							break;
+						case DecafLexer.SENAO:
+							type = "SENAO";
+							break;
+
+						case DecafLexer.VOID:
+							type = "VOID";
+							break;
+
+						case DecafLexer.PARA:
+							type = "SENAO";
+							break;
+
+
+						case DecafLexer.FORPAR:
+							type = "FORPAR";
+							break;
+
+						case DecafLexer.BREAK:
+							type = "BREAK";
+							break;
+
+						case DecafLexer.RETORNO:
+							type = "SENAO";
+							break;
+
+
+
+
+						case DecafLexer.CONTINUA:
+							type = "CONTINUA";
+							break;
+
+						case DecafLexer.FALSO:
+							type = "FALSO";
+							break;
+
+						case DecafLexer.VERDADEIRO:
+							type = "VERDADEIRO";
+							break;
+
+						case DecafLexer.INTEIRO:
+							type = "INTEIRO";
+							break;
+
+						/*case
  						DecafLexer.RESERVADAS:
 							type = "RESERVADAS";
 							break;
-
+ 						*/
 
 }
 		        			System.out.println (token.getLine() + type + " " + text);
