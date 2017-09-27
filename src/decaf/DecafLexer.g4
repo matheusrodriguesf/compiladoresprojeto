@@ -33,11 +33,12 @@ CONTINUA: 'continue';
 
 
 HEX: '0x'('0'..'9'|'a'..'f'|'A'..'F')+;
-NUMBER: ('-')?('0'..'9')+;
+NUMBER: ('-')?('0'..'9')+ ~ 'x' ;
 
 //RESERVADAS: BOOLEANO|CHAMAR|CLASSE|SENAO|FALSO|SE|INTEIRO|RETORNO|VERDADEIRO|VOID|PARA|FORPAR|BREAK|CONTINUA;
 OPERADORES : ('+'|'-'|'*'|'<'|'<='|'>'|'>='|'>'|'&&'|'!='|'=='|'||'|'==='|ESPECIAL);
 CHARLITERAL: '\'' CHAR '\'';
+STRING: '"' (ESC|CHAR|NUMBER|OPERADORES|'\\'|~('"'))*'"';
 ID: [_a-zA-Z][0-9_a-zA-Z]*;
 
 
