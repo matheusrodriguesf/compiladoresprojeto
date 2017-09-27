@@ -48,9 +48,42 @@ class Main {
 						case DecafLexer.NUMBER:
 							type = "NUMEROS";
 							break;
-						case DecafLexer.OPERADORES:
+
+						 case DecafLexer.OPERADORES:
 							type = "OPERADORES";
 							break;
+
+
+						case DecafLexer.LBRACKET:
+							type = "LEFT BRACKET";
+							break;
+
+						case DecafLexer.RBRACKET:
+							type = "RIGHT BRACKET";
+							break;
+						
+						case DecafLexer.PONTOVIR:
+							type = "PONTO E VIRGULA";
+							break;
+
+						case DecafLexer.ARITMETICOS:
+							type = "ARITMETICOS";
+							break;
+						
+
+						case DecafLexer.LOGICOS:
+							type = "LOGICOS";
+							break;
+
+						case DecafLexer.COMPARACAO:
+							type = "COMPARACAO";
+							break;
+						
+						case DecafLexer.ATRIBUICAO:
+							type = "ATRIBUICAO";
+							break;
+
+
 						
 						case DecafLexer.BOOLEANO:
 							type = "BOOLEANO";
@@ -110,6 +143,12 @@ class Main {
 							break;
 
 						/*case
+ 						DecafLexer.RESERVADAS:
+							type = "RESERVADAS";
+							break;
+ 						*/
+
+/*cas
  						DecafLexer.RESERVADAS:
 							type = "RESERVADAS";
 							break;

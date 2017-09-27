@@ -16,6 +16,16 @@ tokens
 
 LCURLY : '{';
 RCURLY : '}';
+LPARENT:'(';
+RPARENT:')';
+LBRACKET:'[';
+RBRACKET:']';
+PONTOVIR:';';
+ARITMETICOS:('+'|'-'|'*'|'/'|'%'|'^');
+LOGICOS: ('&&'|'||');
+COMPARACAO: ('>'|'<'|'>='|'<='|'=='|'==='|'!=');
+ATRIBUICAO:'=';
+ESPECIAL: ('!' | '#'|'$'  | '&'  | ',' | '.'| ';'|':'|'?'|'@'|'_'|'~');
 BOOLEANO:'boolean'; 
 CHAMAR:'callout';
 CLASSE:'class';
@@ -36,9 +46,10 @@ HEX: '0x'('0'..'9'|'a'..'f'|'A'..'F')+;
 NUMBER: ('-')?('0'..'9')+ ~ 'x' ;
 
 //RESERVADAS: BOOLEANO|CHAMAR|CLASSE|SENAO|FALSO|SE|INTEIRO|RETORNO|VERDADEIRO|VOID|PARA|FORPAR|BREAK|CONTINUA;
-OPERADORES : ('+'|'-'|'*'|'<'|'<='|'>'|'>='|'>'|'&&'|'!='|'=='|'||'|'==='|ESPECIAL);
+OPERADORES : (LCURLY|RCURLY|LPARENT|RPARENT|LBRACKET|RBRACKET|PONTOVIR|ARITMETICOS|LOGICOS|COMPARACAO|ATRIBUICAO|ESPECIAL);
+
 CHARLITERAL: '\'' CHAR '\'';
-STRING: '"' (ESC|CHAR|NUMBER|OPERADORES|'\\'|~('"'))*'"';
+STRING: '"' (ESC|CHAR|NUMBER|OPERADORES|ESPECIAL|'\\'|~('"'))*'"';
 ID: [_a-zA-Z][0-9_a-zA-Z]*;
 
 
@@ -48,6 +59,6 @@ SL_COMMENT : '//' (~'\n')* '\n' -> skip;
 
 fragment ESC :  '\\' ('\\'|'t'|'n'|'"');
 fragment CHAR : ('a'..'z'| 'A'..'Z'|'0'..'9'|ESC|'\t'|ESPECIAL);
-fragment ESPECIAL: ('!' | '#'|'$' | '%' | '&' | '(' | ')' | '*' | '+' | ',' | '-'| '.'| ';'|':'|'>'|'='|'<'|'?'|'@'| '[' |']'|'^'|'_'|'{'|'}'|'~');
+
 
 
