@@ -27,7 +27,10 @@ OP2:'+'|'-';
 OP3:'%'|'^';
 LOGICOS: ('&&'|'||');
 COMPARACAO: ('>'|'<'|'>='|'<='|'=='|'==='|'!=');
+INCREMENTO: '+=';
+DECREMENTO:'-=';
 ATRIBUICAO:'=';
+
 ESPECIAL: ('!' | '#'|'$'  | '&'  | ',' | '.'| ';'|':'|'?'|'@'|'_'|'~');
 BOOLEANO:'boolean'; 
 CHAMAR:'callout';
