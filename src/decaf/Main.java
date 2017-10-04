@@ -49,6 +49,11 @@ class Main {
 							type = "NUMEROS";
 							break;
 
+
+						case DecafLexer.NUMEROPOSITIVO:
+							type = "NUMEROS POSITIVOS";
+							break;
+
 						 case DecafLexer.OPERADORES:
 							type = "OPERADORES";
 							break;
@@ -66,11 +71,11 @@ class Main {
 							type = "PONTO E VIRGULA";
 							break;
 
-						case DecafLexer.ARITMETICOS:
+						/*case DecafLexer.ARITMETICOS:
 							type = "ARITMETICOS";
 							break;
 						
-
+						*/
 						case DecafLexer.LOGICOS:
 							type = "LOGICOS";
 							break;
