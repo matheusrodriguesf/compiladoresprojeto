@@ -1,12 +1,8 @@
+
 package decaf;
 
 import java.io.*;
 //import antlr.Token;
-<<<<<<< HEAD
-import org.antlr.v4.runtime.Token;
-import org.antlr.v4.runtime.ANTLRInputStream;
-import org.antlr.v4.runtime.CommonTokenStream;
-=======
 import java.util.Arrays;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -19,7 +15,6 @@ import org.antlr.v4.gui.TreeViewer;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
->>>>>>> parsin
 import java6035.tools.CLI.*;
 
 class Main {
@@ -43,17 +38,6 @@ class Main {
 		        		{
 		        			String type = "";
 		        			String text = token.getText();
-<<<<<<< HEAD
-						
-
-		        			switch (token.getType())
-		        			{
-						case DecafLexer.CHARLITERAL:
-							type = "CHARLITERAL";
-							break;
-						
-						case 								DecafLexer.HEX:
-=======
 
 		        			switch (token.getType())
 		        			{
@@ -62,7 +46,6 @@ class Main {
 							break;
 							
 						case DecafLexer.HEX:
->>>>>>> parsin
 							type = "HEXADECIMAL";
 							break;
 
@@ -70,15 +53,6 @@ class Main {
 		        				type = "IDENTIFIER";
 		        				break;
 
-<<<<<<< HEAD
-
-						case DecafLexer.NUMBER:
-							type = "NUMEROS";
-							break;
-
-
-=======
->>>>>>> parsin
 						case DecafLexer.NUMEROPOSITIVO:
 							type = "NUMEROS POSITIVOS";
 							break;
@@ -86,12 +60,7 @@ class Main {
 						 case DecafLexer.OPERADORES:
 							type = "OPERADORES";
 							break;
-<<<<<<< HEAD
-
-
-=======
 						
->>>>>>> parsin
 						case DecafLexer.LBRACKET:
 							type = "LEFT BRACKET";
 							break;
@@ -103,20 +72,11 @@ class Main {
 						case DecafLexer.PONTOVIR:
 							type = "PONTO E VIRGULA";
 							break;
-<<<<<<< HEAD
-
-						/*case DecafLexer.ARITMETICOS:
-							type = "ARITMETICOS";
-							break;
-						
-						*/
-=======
 						case DecafLexer.ARITMETICOS:
 							type = "ARITMETICOS";
 							break;
 						
 						
->>>>>>> parsin
 						case DecafLexer.LOGICOS:
 							type = "LOGICOS";
 							break;
@@ -128,15 +88,10 @@ class Main {
 						case DecafLexer.ATRIBUICAO:
 							type = "ATRIBUICAO";
 							break;
-<<<<<<< HEAD
-
-
-=======
 						
 						case DecafLexer.STRING:
 							type = "STRINGLITERAL";
 							break;
->>>>>>> parsin
 						
 						case DecafLexer.BOOLEANO:
 							type = "BOOLEANO";
@@ -175,13 +130,6 @@ class Main {
 						case DecafLexer.RETORNO:
 							type = "SENAO";
 							break;
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> parsin
 						case DecafLexer.CONTINUA:
 							type = "CONTINUA";
 							break;
@@ -197,27 +145,8 @@ class Main {
 						case DecafLexer.INTEIRO:
 							type = "INTEIRO";
 							break;
-<<<<<<< HEAD
-
-						/*case
- 						DecafLexer.RESERVADAS:
-							type = "RESERVADAS";
-							break;
- 						*/
-
-/*cas
- 						DecafLexer.RESERVADAS:
-							type = "RESERVADAS";
-							break;
- 						*/
-
-}
-		        			System.out.println (token.getLine() + type + " " + text);
-						
-=======
 							}
 		        			System.out.println (token.getLine() + type + " " + text);
->>>>>>> parsin
 		        		}
 		        		done = true;
         			} catch(Exception e) {
@@ -229,13 +158,6 @@ class Main {
         	}
         	else if (CLI.target == CLI.PARSE || CLI.target == CLI.DEFAULT)
         	{
-<<<<<<< HEAD
-        		DecafLexer lexer = new DecafLexer(new ANTLRInputStream(inputStream));
-				CommonTokenStream tokens = new CommonTokenStream(lexer);
-        		DecafParser parser = new DecafParser(tokens);
-                parser.program();
-        	}
-=======
         	    // Primeiro faz o parsing da cadeia
                 DecafLexer lexer = new DecafLexer(new ANTLRInputStream(inputStream));
                 CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -267,7 +189,6 @@ class Main {
                 }
 
             }
->>>>>>> parsin
         	
         } catch(Exception e) {
         	// print the error:
@@ -275,7 +196,3 @@ class Main {
         }
     }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> parsin
